@@ -1,0 +1,31 @@
+# 删除某一行
+sed '1d' <oldfile> > <newfile>  
+
+# 定位某一行
+sed -n '168757p' d2v_document
+
+替换文本中的内容，带g代表全部替换
+sed 's/^0,/F,/g' smoba_file0313.csv > weka00.csv
+
+sed 's/^0,/F,/g' weka00.csv > weka01.csv
+
+sed 's/'-999'/''/g' train1.csv > kkk
+
+去掉一些a到z开头或者A到Z开头
+sed -e '/^[a-zA-Z]/d' spera.txt > xxx
+
+
+
+
+2|WrappedArray(0.6309417, -0.41420546, -0.50235313, 0.059114084, 0.35104606, -0.21835184, -0.13248432, 0.25149813, 0.36076015, -0.27103153)
+sed 's/'\('//g' u1.csv | sed 's/'\)'//g' | sed 's/'WrappedArray'//g'
+
+
+
+# 把开头为1的置为0
+sed 's/^1,/0,/g'
+
+
+去掉,,,,的问题
+sed 's/[,],/,0,/g' eee.txt | sed 's/[,],/,0,/g' | tr -cd , | wc -c
+
