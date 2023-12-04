@@ -1,8 +1,8 @@
-删除首行: sed -i '1d' a.txt
+删除首行: sed '1d' a.txt
 
-删除前100行: sed -i '1,100d' a.txt
+删除前100行: sed '1,100d' a.txt
 
-删除尾行: sed -i '$d' a.txt
+删除尾行: sed '$d' a.txt
 
 # 定位某一行
 sed -n '168757p' d2v_document
